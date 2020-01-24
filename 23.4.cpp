@@ -12,7 +12,6 @@ int main()
 	int KNwords = 0;
 	cout << "Введите строку слов разделённых пробелами -> ";
 	getline(cin, words);
-	cout << words;
 	for (int i = 0; i < words.size(); i++)
 	{
 		if (words[i] != ' ')//защита от неединичного пробела
@@ -22,8 +21,6 @@ int main()
 			{
 				Buff += 1;
 			}
-			cout << Buff << endl;
-			cout << words[i] << ' ' << words[i + Buff - 1] << endl;
 			if (((words[i] == 'к') ||(words[i] == 'К'))&&((words[i + Buff - 1] == 'Н') || (words[i + Buff - 1]=='н')))
 			{
 				KNwords++;
